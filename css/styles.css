@@ -709,7 +709,6 @@ margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
     background: var(--brand-color);
-  
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     margin-top: 72px;
@@ -717,8 +716,8 @@ margin-bottom: 0;
     text-align: center;
     letter-spacing: 0.04em;
     color: var(--brand-color-white-text);
-    width: 170px;
-    height: 51px;
+    width: 169px;
+    height: 56px;
 
 }
 }
@@ -796,6 +795,45 @@ margin-bottom: 0;
     color: var(--brand-color-black-text);
     padding-top: 4px;
   }
+.tabl-solution{
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/people-office1.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 112px;
+    padding-bottom: 204px;
+}
+.tabl-solutions-title{
+  font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    margin-top: 0;
+    color: var(--brand-color-white-text);
+    text-align: center;
+}
+.tabl-button-studio{
+  font-family: "Roboto";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--brand-color);
+  
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    margin-top: 40px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: var(--brand-color-white-text);
+    width: 169px;
+    height: 56px;
+}
+
 }
 
 
