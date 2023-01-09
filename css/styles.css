@@ -61,28 +61,39 @@ button{
   --brand-color-fill: #757575;
   --brand-color-gey:
 }
-
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--brand-color-black-1);
+  margin: 0 auto;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  bottom: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 @media screen and (max-width:480px) {
   .container {
-      width: 396px;
+      min-width: 100%;
+      max-width: 396px;
       margin-left: auto;
       margin-right: auto;
     }
-.menu,
-.contacts{
+.menu{
   display: none;
 }
 
 }
-@media screen and (min-width:480px) {
- .mobil-menu-open,
- .mobil-menu-container,
- .mobile-menu-clos-btn {
-   display: none;
- }
-}
+
 @media screen and (max-width:768px) {
   .container {
+    min-width: 100%;
      width: 736px;
   }
 
@@ -104,7 +115,16 @@ button{
 }
 /* Mobil */
 
-@media (min-width:0px) and (max-width:479px) {
+@media (min-width:0px) and (max-width:480px) {
+  .menu{
+    display: none;
+  }
+  .tabl-menu{
+    display: none;
+  }
+  .contacts {
+      display: none;
+    }
   .mobil-menu-open {
     height: 22px;
     padding: 0;
@@ -142,6 +162,50 @@ button{
     pointer-events: none;
     transition: opacity 500ms linear, visibility 500ms linear;
   }
+  .mobil-list{
+  list-style: none;
+    padding-left: 0;
+    gap: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.block-button {
+  
+
+  background: var(--brand-color-white-background-color);
+}
+
+.button-portfolio {
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--brand-color-white-background-color);
+  color: var(--brand-color);
+  border: 1px solid var(--brand-color-white-2);
+
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+
+.button-portfolio:hover,
+.button-portfolio:focus {
+  cursor: pointer;
+  background: var(--brand-color);
+  color: var(--brand-color-white-text);
+  box-shadow: 0px 3px 1px rgb(0 0 0 / 10%), 0px 2px 1px rgb(0 0 0 / 8%), 0px 2px 2px rgb(0 0 0 / 12%);
+  border: 1px solid var(--brand-color);
+
+}
 .webStudio{
 display: flex;
 flex-direction: row;
@@ -149,7 +213,7 @@ align-items: flex-start;
 padding-left: 16px;
 color: var(--brand-color-black);
 top: 24px;
-font-family: 'Raleway';
+font-family: 'Raleway', sans-serif;
 font-weight: 800;
 font-size: 18px;
 line-height: 24px;
@@ -166,7 +230,7 @@ text-decoration: none;
   }
 
   .mobil-menu-container {
-    position: relative;
+    height: 796px;
   }
 
   .mobile-menu-clos-btn {
@@ -188,7 +252,7 @@ text-decoration: none;
     flex-direction: column;
     color: var(--brand-color-black);
     align-items: flex-start;
-    padding-top: 80px;
+    margin-top: 80px;
     padding-left: 24px;
     gap: 40px;
     font-style: normal;
@@ -196,7 +260,6 @@ text-decoration: none;
     font-size: 36px;
     line-height: 1.11;
     list-style: none;
-    margin-top: auto;
     text-decoration: none;
 
   }
@@ -286,7 +349,6 @@ text-decoration: none;
   }
 .mobil-solution{
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/people-office1.jpg');
-  background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
   margin: 0 auto;
@@ -442,12 +504,14 @@ font-family: 'Roboto';
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+
   margin-top: -72px;
   margin-left: -16px;
 }
 .mobil-cust-pan-icon{
   flex-basis: calc(100%/2 - 16px);
   width: 190px;
+  height: 88px;
   justify-content: center;
   border: 0.5px solid var(--brand-color-radius);
   border-radius: 4px;
@@ -461,6 +525,8 @@ font-family: 'Roboto';
   align-items: center;
   justify-content: center;
   fill: var(--brand-color-radius);
+  width: 100%;
+  height: 100%;
 }
 .mobil-lowerpart-block{
     display: flex;
@@ -553,7 +619,7 @@ font-family: 'Roboto';
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding-top: 72px;
+    margin-top: 72px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -601,9 +667,7 @@ font-family: 'Roboto';
     display: flex;
   
 }
-.list{
-  display: none;
-}
+
 .overlay{
   display: none;
 }
@@ -658,21 +722,34 @@ font-family: 'Roboto';
     list-style: none;
 }
 .mobil-portfolio{
+
+}
+.mobil-container-portfolio{
   padding-left: 16px;
-  padding-right: 16px;
+    padding-right: 16px;
 }
 }
 
 
 /* Tabl */
-@media (min-width: 480px) and (max-width: 1199px) {
+@media (min-width: 481px) and (max-width: 1199px) {
+  .mobil-menu-open,
+  .mobil-menu-container,
+    .mobile-menu-clos-btn {
+      display: none;
+    }
+  
   .beginning {
       padding-top: 24px;
       padding-bottom: 24px;
     }
   .tabl-container{
+    min-height: 100%;
+    max-width: 736px;
     display: flex;
     justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
   }
   .tabl-navigation {
     display: flex;
@@ -680,8 +757,7 @@ font-family: 'Roboto';
     
   }
   .tabl-portfolio{
-    padding-left: 16px;
-    padding-right: 16px;
+
   }
 
   .tabl-webStudio {
@@ -786,6 +862,14 @@ screen and (min-resolution: 2dppx) {
     color: var(--brand-color-white-text);
     text-align: center;
 }
+.tabl-container-portfolio{
+ max-width: 768px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
 .tabl-button-studio{
   font-family: "Roboto";
     font-weight: 500;
@@ -812,6 +896,8 @@ screen and (min-resolution: 2dppx) {
 .tabl-card-set{
     display: flex;
     flex-wrap: wrap;
+    min-width: 736px;
+    max-width: 100%;
     padding-top: 96px;
     padding-left: 16px;
     padding-right: 16px;
@@ -838,6 +924,7 @@ screen and (min-resolution: 2dppx) {
 }
 .tabl-li{
   list-style: none;
+  max-width: 356px;
   flex-basis: calc(100%/2 - 24px);
   margin-left: 24px;
   margin-top: 72px;
@@ -867,6 +954,7 @@ screen and (min-resolution: 2dppx) {
   padding: 0;
 }
 .tabl-container-photo{
+  width: 100%;
   margin-top: 96px;
   padding-left: 16px;
   padding-right: 16px;
@@ -911,7 +999,7 @@ screen and (min-resolution: 2dppx) {
   
 }
 .tabi-card-set-foto-item{
-  flex-basis: calc(100%/2 - 24px);
+  width:calc(100%/2 - 24px);
   margin-left: 24px;
   margin-top: 64px;
 }
@@ -945,6 +1033,7 @@ screen and (min-resolution: 2dppx) {
   margin-bottom: 72px;
 }
 .tabl-container-customers{
+  width: 100%;
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 96px;
@@ -961,6 +1050,7 @@ screen and (min-resolution: 2dppx) {
 .tabl-cust-pan-icon {
   flex-basis: calc(100%/3 - 16px);
   width: 168px;
+  height: 88px;
   justify-content: center;
   border: 0.5px solid var(--brand-color-radius);
   border-radius: 4px;
@@ -975,6 +1065,8 @@ screen and (min-resolution: 2dppx) {
   align-items: center;
   justify-content: center;
   fill: var(--brand-color-radius);
+  width: 100%;
+  height: 100%;
 }
 .tabl-container-footer{
   display: flex;
@@ -1159,7 +1251,6 @@ screen and (min-resolution: 2dppx) {
   margin-right: auto;
 }
 .block-button {
-
   background: var(--brand-color-white-background-color);
 }
 .button-portfolio {
@@ -1176,7 +1267,6 @@ screen and (min-resolution: 2dppx) {
   border-radius: 4px;
   padding: 8px 16px;
 }
-
 .button-portfolio:hover,
 .button-portfolio:focus {
   cursor: pointer;
@@ -1196,7 +1286,7 @@ screen and (min-resolution: 2dppx) {
 .tabl-foto-text-title {
   flex-basis: calc(100%/2 -24px);
   box-sizing: border-box;
-  width: 356px;
+  max-width: 356px;
   margin-left: 24px;
   margin-bottom: 72px;
   background: var(--brand-color-white-background);
@@ -1869,6 +1959,8 @@ button .link:default {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 100%;
 
 }
 
@@ -1966,6 +2058,10 @@ button .link:default {
   height: 40px;
   background-color: var(--brand-color);
   border-radius: 50%;
+}
+.wardrobe-title-icon:hover,
+.wardrobe-title-icon:focus{
+  background-color:var(--brand-color-blue);
 }
 
 .wardrobe-icon-svg {
@@ -2443,6 +2539,8 @@ label {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 100%;
   fill: var(--brand-color-radius);
 }
 
@@ -2452,14 +2550,13 @@ label {
   justify-content: center;
   width: 168px;
   height: 88px;
-
-
   gap: 24px;
   border: 0.5px solid var(--brand-color-radius);
   border-radius: 4px;
   fill: var(--brand-color-radius);
 }
-
+.customers-icon:hover,
+.customers-icon:focus
 .customers-panei-icon:hover,
 .customers-panei-icon:focus {
   border-color: var(--brand-color);
