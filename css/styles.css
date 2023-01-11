@@ -1386,6 +1386,50 @@ screen and (min-resolution: 2dppx) {
     flex-direction: row;
     gap: 0;
 }
+.mobil-sobscribe-input{
+    position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding-top: 72px;
+      padding-left: 104px;
+      flex-basis: calc(100%/2);
+}
+.mobil-lowerpart-block{
+  display: flex;
+    justify-content: flex-start;
+    color: var(--brand-color-white-background-color);
+    text-decoration: none;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1, 16;
+}
+.mobil-footer-icon{
+    width: 208px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0;
+}
+.mobil-footer-title{
+    display: flex;
+      justify-content: flex-start;
+      Font-size: 16px;
+      line-height: 2;
+      color: var(--brand-color-white-background);
+      margin-top: 0;
+      margin-bottom: 0;
+}
+.mobil-sobscribe-input{
+    position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 72px;
+      margin-right: auto;
+      margin-left: 0;
+}
 }
 
 
