@@ -91,13 +91,21 @@ body {
 
 }
 
-@media screen and (max-width:768px) {
+ @media screen and (max-width:768px) {
   .container {
     min-width: 100%;
      width: 736px;
   }
+.mobil-card-set {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  justify-content: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  list-style: none;
 
-
+}
 }
 
 
@@ -115,7 +123,8 @@ body {
 }
 /* Mobil */
 
-@media (min-width:0px) and (max-width:480px) {
+@media (min-width:0px) and (max-width:768px) {
+
   .menu{
     display: none;
   }
@@ -411,6 +420,7 @@ screen and (min-resolution: 2dppx) {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 .mobil-card-set{
   display: flex;
   flex-direction: column;
@@ -419,7 +429,10 @@ screen and (min-resolution: 2dppx) {
   padding-left: 16px;
   padding-right: 16px;
   list-style: none;
+  
+
 }
+
 .mobil-text-strategy{
   font-size: 36px;
   line-height: 1.11;
@@ -712,6 +725,8 @@ font-family: 'Roboto';
     gap: 24px;
 }
 .mobil-foto-text-title{
+  display: flex;
+  justify-content: center   ;
   flex-basis: calc(100%/1);
     box-sizing: border-box;
     width: 356px;
@@ -732,13 +747,19 @@ font-family: 'Roboto';
 
 
 /* Tabl */
-@media (min-width: 481px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .mobil-menu-open,
   .mobil-menu-container,
     .mobile-menu-clos-btn {
       display: none;
     }
+
+     .contacts {
+       display: flex;
+       align-items: center;
+       margin-left: auto;
   
+     }
   .beginning {
       padding-top: 24px;
       padding-bottom: 24px;
@@ -767,7 +788,7 @@ font-family: 'Roboto';
       padding-left: 16px;
       color: var(--brand-color-black);
       top: 24px;
-      font-family: 'Raleway';
+      font-family: 'Raleway', sans-serif;
       font-weight: 800;
       font-size: 18px;
       line-height: 24px;
@@ -815,6 +836,8 @@ font-family: 'Roboto';
     color: var(--brand-color);
   }
   .tabl-contacks{
+    display: flex;
+    flex-direction: column;
     margin-left: 118px;
     padding-right: 16px;
   }
@@ -896,6 +919,7 @@ screen and (min-resolution: 2dppx) {
 .tabl-card-set{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     min-width: 736px;
     max-width: 100%;
     padding-top: 96px;
@@ -1341,7 +1365,28 @@ screen and (min-resolution: 2dppx) {
 
 }
 
-
+@media screen and (min-width:768px) {
+  .mobil-card-set {
+      display: flex;
+      justify-content: center;
+      padding-left: 16px;
+      padding-right: 16px;
+      list-style: none;
+  flex-direction: row;
+  gap:0;
+}
+.mobil-card-set-foto{
+    display: flex;
+      flex-direction: row;
+    
+      gap: 0;
+}
+.mobil-foto-work{
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+}
+}
 
 
 
@@ -1414,7 +1459,7 @@ screen and (min-resolution: 2dppx) {
     padding: 0px;
     color: var(--brand-color-black);
     top: 24px;
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     font-weight: 800;
     font-size: 18px;
     line-height: 24px;
@@ -1616,6 +1661,7 @@ button .link:default {
   color: var(--brand-color-black);
   margin-top: 0;
   margin-bottom: 8px;
+  margin-top: 8px;
 }
 
 .card-set>.straegy,
